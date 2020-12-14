@@ -1,13 +1,15 @@
 import React from 'react';
+import BoxLogin from '../../components/BoxLogin';
+import Logo from '../../components/Logo';
 
-import { Text } from 'react-native';
-
-import { Container } from './styles';
+import { Container,Dog } from './styles';
 
 const Login: React.FC = () => {
   return (
     <Container>
-      <Text>Login</Text>
+      <Logo/>
+      <BoxLogin/>
+      <Dog/>
     </Container>
   );
 };
