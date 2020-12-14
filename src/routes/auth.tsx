@@ -1,9 +1,16 @@
 import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
 
-// import { Container } from './styles';
+import Login from '../pages/Login';
+import CreateAccount from '../pages/CreateAccount';
 
-const AuthRoutes: React.FC = () => {
-  return <></>;
-}
+const AppStack = createStackNavigator();
+
+const AuthRoutes: React.FC = () => (
+  <AppStack.Navigator initialRouteName='Login' headerMode='none'>
+    <AppStack.Screen name="Login" component={Login} />
+    <AppStack.Screen name="CreateAccount" component={CreateAccount} />
+  </AppStack.Navigator>
+);
 
 export default AuthRoutes;
